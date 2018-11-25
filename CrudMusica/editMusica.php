@@ -1,8 +1,8 @@
 <?php
 session_start();
-header("location:/Trabalho LP/index.php");
+header("location:/Trabalho-LP4/index.php");
 if(isset ($_SESSION['usuario'])){
-    $con = @ mysqli_connect("localhost","root","usbw","bd_musicas");
+    $con = @ mysqli_connect("localhost","root","","bd_musicas");
     
     $res=mysqli_prepare($con, " UPDATE musicas SET 
     nm_musica = ?,

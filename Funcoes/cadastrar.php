@@ -1,6 +1,6 @@
 <?php
-	header("location:/Trabalho LP/index.php");
-	$con = @ mysqli_connect("localhost","root","usbw","bd_musicas");
+	header("location:/Trabalho-LP4/index.php");
+	$con = @ mysqli_connect("localhost","root","","bd_musicas");
   if ($con == null ) {
     die("Falha ao conectar");	
   } else {

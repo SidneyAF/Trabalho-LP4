@@ -12,7 +12,7 @@
     <br>
     <form action="Funcoes/cadastrar.php" method="POST">
         Email <input type="email" name="email" required>
-        Senha <input type="text" name="senha" required>
+        Senha <input type="password" name="senha" required>
         <input type="submit" value="Cadastrar">
     </form>
 </BODY>
