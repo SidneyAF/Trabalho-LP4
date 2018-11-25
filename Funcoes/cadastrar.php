@@ -1,6 +1,6 @@
 <?php
 	header("location:/Trabalho-LP4/index.php");
-	$con = @ mysqli_connect("localhost","root","","bd_musicas");
+	include $_SERVER["DOCUMENT_ROOT"]."/Trabalho-LP4/connection.php";
   if ($con == null ) {
     die("Falha ao conectar");	
   } else {

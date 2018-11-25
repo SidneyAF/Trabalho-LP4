@@ -2,7 +2,7 @@
 session_start();
 header("location:/Trabalho-LP4/index.php");
 if(isset ($_SESSION['usuario'])){
-    $con = @ mysqli_connect("localhost","root","","bd_musicas");
+    include $_SERVER["DOCUMENT_ROOT"]."/Trabalho-LP4/connection.php";
     
     $res=mysqli_prepare($con, " UPDATE musicas SET 
     nm_musica = ?,

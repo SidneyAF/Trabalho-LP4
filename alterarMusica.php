@@ -13,7 +13,7 @@
     echo "<br>";
     if(isset ($_SESSION['usuario'])){   
     $id = $_GET['idMusica'];
-    $con = @ mysqli_connect("localhost","root","","bd_musicas");
+    include $_SERVER["DOCUMENT_ROOT"]."/Trabalho-LP4/connection.php";
     if($res=mysqli_query($con,"select nm_musica, nm_artista, nm_album, nm_genero, dt_lancamento, tipo_musica from musicas WHERE id_musica=$id")){
         if ($linha=mysqli_fetch_assoc($res)) {
         }else{
