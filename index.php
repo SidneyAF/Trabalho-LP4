@@ -27,12 +27,13 @@
 	
         <div class="inner-bg">
             <div class="container">
-			<h1>Seja bem vindo.</h1>
-			<h2>Plataforma de Cadastro de Músicas</h2>
+			<h1>Seja bem-vindo!</h1>
+			<h2>Plataforma de cadastro de músicas</h2>
 			<br>
 			<?php
 		session_start();
 		include 'menu.php';
+		include 'header.php';
 		echo "<br><br>";
 		include $_SERVER["DOCUMENT_ROOT"]."/Trabalho-LP4/connection.php";
   		if ($con == null ) {
@@ -90,12 +91,10 @@
         </div>
     </div>
 </div>
-	
-	
-	<script src="assets/js/jquery-1.11.1.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/jquery.backstretch.min.js"></script>
-    <script src="assets/js/scripts.js"></script>
+	<h1>Localize a gravadora mais próxima você!</h1><hr>
+	<?php
+	include 'map.php';
+	?>
 </BODY>
 
 </HTML>

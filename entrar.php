@@ -29,6 +29,7 @@
         <p>Digite seu e-mail e senha cadastrados</p>
         <?php
     include 'menu.php';
+    include 'header.php';
     ?>
     <br>
     <form action="Funcoes/login.php" method="POST">
@@ -41,7 +42,21 @@
     </div>
 </div>
 
+<?php include'footer.php';?>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+		<script>
+        const h1 = document.querySelectorAll('h1');
+
+				TweenMax.staggerFromTo(h1, 1, {
+				scale: .3,
+				rotation: 180
+				}, {
+		scale: 1.1,
+		rotation: 0
+		}, .3);
+    </script>
+    
 <script src="assets/js/jquery-1.11.1.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/js/jquery.backstretch.min.js"></script>
