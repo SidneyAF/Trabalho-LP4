@@ -37,33 +37,16 @@
     $nameErr = $emailErr = $genderErr = $websiteErr = "";
     $name = $email = $gender = $comment = $website = "";
     
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {      
-      if (empty($_POST["email"])) {
-        $emailErr = "Email is required";
-      } else {
-        $email = test_input($_POST["email"]);
-        // check if e-mail address is well-formed
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-          $emailErr = "Invalid email format"; 
-        }
-      }
-     }
-
-    function test_input($data) {
-      $data = trim($data);
-      $data = stripslashes($data);
-      $data = htmlspecialchars($data);
-      return $data;
-    }
+   
 
     ?>
     <br>
     <p><span class="error">* Digite dados válidos</span></p>
     <form action="Funcoes/cadastrar.php" method="POST">
         
-         E-mail: <input type="text" name="email">
+         E-mail: <input type="text" name="email"pattern=".+@+.+.com" size="30">
          <span class="error">* <?php echo $emailErr;?></span>
-        Senha <input type="password" name="senha" required>
+        Senha <input type="password" name="senha" required minlength="4">
         <button type="submit" class="btn btn-default" value="Cadastrar">Cadastrar</button> 
     </form>
     
