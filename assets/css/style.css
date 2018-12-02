@@ -172,11 +172,19 @@ img { max-width: 100%; }
 	margin-top: 25px;
 }
 
+.modal-title{
+	color: black;
+}
+
 #map {
 	height: 400px;  /* The height is 400 pixels */
 	width: 100%;  /* The width is the width of the web page */
    }
-
+#msg{ 
+	width: 200px; 
+	height: 150px; 
+	resize: none;
+	}
 /***** Media queries *****/
 
 @media (min-width: 992px) and (max-width: 1199px) {}

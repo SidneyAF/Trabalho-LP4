@@ -1,12 +1,10 @@
-<HTML>
-<HEAD>
-<STYLE>
-.error {color: #FF0000;}
-</STYLE>
+<!DOCTYPE html>
+<html>
+<head>
 <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Cadastro</title>
+        <title>Erro de Permissão</title>
 
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
@@ -20,52 +18,22 @@
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
         <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
-</HEAD>
+</head>
+<body>
 
-<BODY> 
-
-<div class="top-content">
+	<div class="top-content">
 	
     <div class="inner-bg">
         <div class="container">
-        <h1>Cadastrar<br></h1>
-        <p>Digite um e-mail e senha válidos para efetuar o cadastro</p>
-        <?php
+        <img src="assets\img\error.png" alt="ERROR">
+        <h1>Erro de permissão!<br></h1>
+        <p>Você não possui permissão para acessar o sistema</p>
+    <?php
     include 'menu.php';
     include 'header.php';
-
-    $nameErr = $emailErr = $genderErr = $websiteErr = "";
-    $name = $email = $gender = $comment = $website = "";
-    
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {      
-      if (empty($_POST["email"])) {
-        $emailErr = "Email is required";
-      } else {
-        $email = test_input($_POST["email"]);
-        // check if e-mail address is well-formed
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-          $emailErr = "Invalid email format"; 
-        }
-      }
-     }
-
-    function test_input($data) {
-      $data = trim($data);
-      $data = stripslashes($data);
-      $data = htmlspecialchars($data);
-      return $data;
-    }
-
     ?>
     <br>
-    <p><span class="error">* Digite dados válidos</span></p>
-    <form action="Funcoes/cadastrar.php" method="POST">
-        
-         E-mail: <input type="text" name="email">
-         <span class="error">* <?php echo $emailErr;?></span>
-        Senha <input type="password" name="senha" required>
-        <button type="submit" class="btn btn-default" value="Cadastrar">Cadastrar</button> 
-    </form>
+    
     
                           
     </div>
@@ -85,12 +53,11 @@
 		rotation: 0
 		}, .3);
     </script>
-
+    
 <script src="assets/js/jquery-1.11.1.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/js/jquery.backstretch.min.js"></script>
 <script src="assets/js/scripts.js"></script>
+</body> 
 
-</BODY>
-
-</HTML>
+</html>

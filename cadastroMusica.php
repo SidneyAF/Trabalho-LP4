@@ -20,39 +20,47 @@
 </HEAD>
 
 <BODY>
-<body>
 
 <div class="top-content">
 
 <div class="inner-bg">
     <div class="container">
-    <h1>Entrar<br></h1>
-    <p>Digite seu e-mail e senha cadastrados</p>
+    <h1>Cadastrar música<br></h1>
+    <p>Digite as informações da música que desejar cadastrar</p>
     <?php
         include 'menu.php';
         include 'header.php';
     ?>
     <br>
     <div class="form-group">
-    <form action="CrudMusica/cadastrarMusica.php" method="POST">
-        <input type="text" name="id" placeholder="Digite aqui o ID" required>
+    <form id="cadastroMusica" action="CrudMusica/cadastrarMusica.php" method="POST">
+        <label>Música</label><br>
         <input type="text" name="nome" placeholder="Digite aqui o Nome"required><br><br>
-        <input type="text" name="artista" placeholder="Digite aqui o Artista">
+        <label>Artista</label><br>
+        <input type="text" name="artista" placeholder="Digite aqui o Artista"><br><br>
+        <label>Álbum</label><br>
         <input type="text" name="album" placeholder="Digite aqui o Albúm" ><br><br>
-        <label for="date">Lançamento</label><input type="date" name="lancamento"><br><br>
-        <label for="sel1">Gênero:</label>
+        <label for="date">Lançamento</label><br>
+        <input type="date" name="lancamento"><br><br>
+        <label for="sel1">Gênero</label>
         <select class="form-control" id="sel1"  name="genero">
                     <option value="Rock">Rock</option>
                     <option value="Sertanejo">Sertanejo</option>
                     <option value="Pop">Pop</option>
                     <option value="MPB">MPB</option>
-                </select><br><br>
-                <label for="tipoMusica">Tipo:</label>
-                <input type="radio" name="tipoMusica" value="Instrumental">Instrumental
-                <input type="radio" name="tipoMusica" value="Vocal">Vocal <br><br>
+                    <option value="Samba">Samba</option>
+                    <option value="Pagode">Pagode</option>
+                    <option value="Eletrônica">Eletrônica</option>
+                </select><br>
+                <label for="tipoMusica">Tipo</label><br>
+                <input type="radio" name="tipoMusica" value="Instrumental">Instrumental  
+                <input type="radio" name="tipoMusica" value="Vocal">Vocal<br><br>
+              <label>Comentário</label><br>
+              <textarea id="msg" name="txtComentario" form="cadastroMusica" rows="20" cols="50" placeholder="Digite aqui seu comentario"></textarea><br><br>
               <button type="submit" class="btn btn-default" value="Cadastrar">Cadastrar</button> 
               </div>
     </form>
+   
     </div>
                       
 </div>
@@ -77,7 +85,6 @@
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/js/jquery.backstretch.min.js"></script>
 <script src="assets/js/scripts.js"></script>
-</body> 
     
 </BODY>
 

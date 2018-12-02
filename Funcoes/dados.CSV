@@ -1,0 +1,6 @@
+﻿id_musica;nm_musica;nm_artista;nm_album;dt_lancamento;nm_genero;fk_email_usuario;tipo_musica;txt_comentario
+1;Skate;Charlie Brown Jr.;My Life;2012-09-29;Sertanejo;-;Instrumental;Muito Boa !!
+2;Black;Pearl Jam;Ten;1991-09-29;Pop;-;Vocal; Amo essa musica.
+3;Car Radio;Twenty One Pilots;Vessel;2015-06-14;Rock;-;Vocal; Simplesmente sensacional
+4;Overture;The Who;Tommy;1969-04-30;Rock;-;Instrumental; Escuto no modo replay
+5;Cartao Postal;Scalene;Magnetite;2017-09-29;Rock;-;Vocal; Otima para viagens! 

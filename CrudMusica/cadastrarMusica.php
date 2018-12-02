@@ -6,8 +6,8 @@ if(isset ($_SESSION['usuario'])){
   if ($con == null ) {
     die("Falha ao conectar");	
   } else {
-    $ps = mysqli_prepare($con,"INSERT musicas VALUES (?,?,?,?,?,?,?,?)");
-    mysqli_stmt_bind_param($ps,"isssssss",$_POST['id'],$_POST['nome'],$_POST['artista'],$_POST['album'],$_POST['lancamento'],$_POST['genero'],$_SESSION['usuario'],$_POST['tipoMusica']);
+    $ps = mysqli_prepare($con,"INSERT musicas VALUES (?,?,?,?,?,?,?,?,?)");
+    mysqli_stmt_bind_param($ps,"issssssss",$_POST['id'],$_POST['nome'],$_POST['artista'],$_POST['album'],$_POST['lancamento'],$_POST['genero'],$_SESSION['usuario'],$_POST['tipoMusica'],$_POST['txtComentario']);
     mysqli_stmt_execute($ps);
   }
 }
