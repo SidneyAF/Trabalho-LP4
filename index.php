@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
-		<link rel="stylesheet" href="assets/css/form-elements.css">
+				<link rel="stylesheet" href="assets/css/form-elements.css">
         <link rel="stylesheet" href="assets/css/style.css">
 
         
@@ -35,7 +35,9 @@
 		include 'menu.php';
 		include 'header.php';
 		echo "<br>";
-		echo "<button type='submit' class='btn btn-secondary' name='cmd' value='Carregar tabela'>Carregar CSV</button>";
+		echo "<form method='POST' action='Funcoes/carregarDados.php'>
+		<input type='submit' class='btn btn-info btn-lg' name='cmd' value='Carregar tabela' />
+		</form>";
 		echo "<br><br>";
 		include $_SERVER["DOCUMENT_ROOT"]."/Trabalho-LP4/connection.php";
   		if ($con == null ) {
